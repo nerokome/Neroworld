@@ -6,7 +6,7 @@ import {
   SiNextdotjs, SiReact, SiTypescript, SiJavascript, 
   SiRedux, SiNodedotjs, SiExpress, SiTailwindcss, 
   SiFramer, SiMysql, SiMongodb, SiGithub, SiFigma,
-  SiPostgresql, SiFlutter, SiGo 
+  SiPostgresql, SiFlutter, SiGo, SiSupabase, SiFirebase 
 } from "react-icons/si";
 
 const Page = () => {
@@ -24,17 +24,18 @@ const Page = () => {
       ],
     },
     {
-      title: "Backend & DB",
-      description: "I design and build reliable backend systems and databases that power web and mobile applications. Security, performance, and scalability are always my top priorities.",
-      skills: [
-        { name: "Golang", icon: <SiGo />, color: "group-hover:text-cyan-500" },
-        { name: "Node.js", icon: <SiNodedotjs />, color: "group-hover:text-green-500" },
-        { name: "Express.js", icon: <SiExpress />, color: "group-hover:text-gray-400" },
-        { name: "PostgreSQL", icon: <SiPostgresql />, color: "group-hover:text-blue-400" },
-        { name: "MySQL", icon: <SiMysql />, color: "group-hover:text-blue-600" },
-        { name: "MongoDB", icon: <SiMongodb />, color: "group-hover:text-green-600" },
-      ],
-    },
+  title: "Backend & Cloud",
+  description: "I design and build reliable backend systems and cloud architectures that power web and mobile applications. Security, performance, and scalability are always my top priorities.",
+  skills: [
+    { name: "Supabase", icon: <SiSupabase />, color: "group-hover:text-emerald-500" },
+    { name: "Firebase", icon: <SiFirebase />, color: "group-hover:text-orange-500" },
+    { name: "Golang", icon: <SiGo />, color: "group-hover:text-cyan-500" },
+    { name: "Node.js", icon: <SiNodedotjs />, color: "group-hover:text-green-500" },
+    { name: "PostgreSQL", icon: <SiPostgresql />, color: "group-hover:text-blue-400" },
+    { name: "MySQL", icon: <SiMysql />, color: "group-hover:text-blue-600" }, // MySQL is back!
+    { name: "MongoDB", icon: <SiMongodb />, color: "group-hover:text-green-600" },
+  ],
+},
     {
       title: "Mobile & Tools",
       description: "I build mobile apps and leverage modern tools to ensure development is smooth, collaborative, and produces high-quality, maintainable code.",
@@ -49,7 +50,7 @@ const Page = () => {
 
   return (
     <main className="relative min-h-screen bg-[#030303] text-white overflow-x-hidden">
-      {/* FIXED Full-Screen Background (Unchanged) */}
+      {/* FIXED Full-Screen Background */}
       <div className="fixed inset-0 z-0 overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]" />
         <div className="absolute top-1/3 left-1/4 w-[600px] h-[600px] bg-blue-600/10 blur-[140px] rounded-full animate-pulse-slow" />
@@ -73,7 +74,7 @@ const Page = () => {
               Tech <span className="text-blue-500">Stack</span>
             </h1>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              A collection of technologies I use to bring digital products to life.
+              Modern tools and BaaS platforms I use to ship scalable products rapidly.
             </p>
           </motion.div>
 
@@ -110,7 +111,7 @@ const Page = () => {
                       <div className={`text-3xl mb-3 text-gray-400 transition-colors duration-300 ${skill.color}`}>
                         {skill.icon}
                       </div>
-                      <span className="text-xs font-semibold tracking-wide text-gray-400 group-hover:text-white transition-colors duration-300">
+                      <span className="text-xs font-semibold tracking-wide text-gray-400 group-hover:text-white transition-colors duration-300 text-center">
                         {skill.name}
                       </span>
                     </motion.div>
@@ -119,11 +120,8 @@ const Page = () => {
               </motion.div>
             ))}
           </div>
-
         </div>
-       
       </section>
-      
     </main>
   );
 };

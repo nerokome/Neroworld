@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const AboutPage = () => {
+const Page = () => {
   const skills = [
     "Full-stack web applications",
     "Mobile applications",
@@ -106,4 +106,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default Page;

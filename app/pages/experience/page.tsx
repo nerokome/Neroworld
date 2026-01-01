@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const ExperiencesPage = () => {
+const Page = () => {
   const experiences = [
     {
       role: "Frontend Developer",
@@ -117,4 +117,4 @@ const ExperiencesPage = () => {
   );
 };
 
-export default ExperiencesPage;
+export default Page;

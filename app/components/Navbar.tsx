@@ -8,18 +8,18 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const navLinks = [
   { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Experience', href: '/experience' },
-  { name: 'Skills', href: '/skills' },
-  { name: 'Projects', href: '/projects' },
-  { name: 'Contact', href: '/contact' },
+  { name: 'About', href: '/pages/about' },
+  { name: 'Experience', href: '/pages/experience' },
+  { name: 'Skills', href: '/pages/skills' },
+  { name: 'Projects', href: '/pages/projects' },
+  { name: 'Contact', href: '/pages/contact' },
 ]
 
 const Navbar = () => {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
 
-  // Prevent scrolling when menu is open
+  
   useEffect(() => {
     if (open) {
       document.body.style.overflow = 'hidden'

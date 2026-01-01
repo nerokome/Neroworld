@@ -135,7 +135,7 @@ const Navbar = () => {
               {/* Bottom Decoration */}
               <div className="absolute bottom-10 left-8">
                 <p className="text-[9px] font-mono text-gray-600 uppercase tracking-widest leading-loose">
-                  Nero_Oghenekome // 2026 <br />
+                  Nero_Oghenekome // 2025 <br />
                   Ready for Collaboration
                 </p>
               </div>

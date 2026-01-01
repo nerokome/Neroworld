@@ -56,7 +56,7 @@ const Page = () => {
   </p>
 
   <p>
-    On the <span className="text-blue-400 font-semibold italic underline decoration-blue-500/30 underline-offset-4">frontend</span>, I mainly work with React and Next.js to craft clean, dark-friendly interfaces. I care about predictable state, reusable components, and layouts that scale as the app grows.
+    On the <span className="text-blue-400 font-semibold  underline decoration-blue-500/30 underline-offset-4">frontend</span>, I mainly work with React and Next.js to craft clean, dark-friendly interfaces. I care about predictable state, reusable components, and layouts that scale as the app grows.
   </p>
 
   <p>
@@ -64,7 +64,7 @@ const Page = () => {
   </p>
 
   <p>
-    On the <span className="text-purple-400 font-semibold italic underline decoration-purple-500/30 underline-offset-4">backend</span>, I design APIs and services that actually work for real users: handling authentication, data modeling, integrations, and analytics. I treat backend architecture with the same care as the frontend experience.
+    On the <span className="text-blue-400 font-semibold underline decoration-purple-500/30 underline-offset-4">backend</span>, I design APIs and services that actually work for real users: handling authentication, data modeling, integrations, and analytics. I treat backend architecture with the same care as the frontend experience.
   </p>
 </motion.div>
 
@@ -95,10 +95,10 @@ const Page = () => {
             </div>
           </motion.div>
 
-          {/* Footer Border */}
+          
           <div className="border-t border-white/10 pt-8 flex justify-between items-center text-sm font-mono text-gray-500">
             <span>Building for the future</span>
-            <span>2026</span>
+            <span>2025</span>
           </div>
         </div>
       </section>

@@ -32,7 +32,7 @@ const Page = () => {
     { name: "Golang", icon: <SiGo />, color: "group-hover:text-cyan-500" },
     { name: "Node.js", icon: <SiNodedotjs />, color: "group-hover:text-green-500" },
     { name: "PostgreSQL", icon: <SiPostgresql />, color: "group-hover:text-blue-400" },
-    { name: "MySQL", icon: <SiMysql />, color: "group-hover:text-blue-600" }, // MySQL is back!
+    { name: "MySQL", icon: <SiMysql />, color: "group-hover:text-blue-600" }, 
     { name: "MongoDB", icon: <SiMongodb />, color: "group-hover:text-green-600" },
   ],
 },
@@ -50,7 +50,7 @@ const Page = () => {
 
   return (
     <main className="relative min-h-screen bg-[#030303] text-white overflow-x-hidden">
-      {/* FIXED Full-Screen Background */}
+    
       <div className="fixed inset-0 z-0 overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]" />
         <div className="absolute top-1/3 left-1/4 w-[600px] h-[600px] bg-blue-600/10 blur-[140px] rounded-full animate-pulse-slow" />
@@ -59,11 +59,10 @@ const Page = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle,transparent_0%,#030303_90%)]" />
       </div>
 
-      {/* Content Layer */}
+     
       <section className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 md:px-24 py-32">
         <div className="max-w-5xl w-full space-y-16">
-          
-          {/* Header Section */}
+        
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

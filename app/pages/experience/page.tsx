@@ -33,7 +33,7 @@ const Page = () => {
 
   return (
     <main className="relative min-h-screen bg-[#030303] text-white overflow-x-hidden">
-      {/* FIXED Full-Screen Background (Unchanged as requested) */}
+     
       <div className="fixed inset-0 z-0 overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]" />
         <div className="absolute top-1/3 left-1/4 w-[600px] h-[600px] bg-blue-600/10 blur-[140px] rounded-full animate-pulse-slow" />
@@ -42,11 +42,11 @@ const Page = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle,transparent_0%,#030303_90%)]" />
       </div>
 
-      {/* Content Layer */}
+      
       <section className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 md:px-24 py-32">
         <div className="max-w-4xl w-full space-y-16">
           
-          {/* Header Section */}
+        
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -59,7 +59,7 @@ const Page = () => {
             <div className="h-1 w-20 bg-blue-600 rounded-full" />
           </motion.div>
 
-          {/* Timeline Wrapper */}
+          
           <div className="relative border-l border-white/10 ml-4 md:ml-0 md:pl-8 space-y-12">
             {experiences.map((exp, index) => (
               <motion.div
@@ -70,13 +70,13 @@ const Page = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group relative"
               >
-                {/* Timeline Dot */}
+                
                 <div className="absolute -left-[45px] top-2 w-4 h-4 bg-blue-500 rounded-full border-4 border-[#030303] z-20 group-hover:scale-125 transition-transform" />
                 
-                {/* Main Card */}
+               
                 <div className="relative bg-white/5 p-8 rounded-2xl border border-white/10 backdrop-blur-xl transition-all duration-300 group-hover:bg-white/[0.08] group-hover:border-blue-500/30 group-hover:shadow-[0_0_30px_rgba(59,130,246,0.1)]">
                   
-                  {/* Card Content */}
+                  
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
                     <div>
                       <h2 className="text-2xl font-bold group-hover:text-blue-400 transition-colors">
@@ -91,7 +91,7 @@ const Page = () => {
                     </span>
                   </div>
 
-                  {/* Description List */}
+                  
                   <ul className="space-y-4">
                     {exp.description.map((item, i) => (
                       <li key={i} className="flex items-start gap-3 text-gray-400 group-hover:text-gray-300 transition-colors leading-relaxed">
@@ -101,7 +101,7 @@ const Page = () => {
                     ))}
                   </ul>
 
-                  {/* Decorative corner accent */}
+                  
                   <div className="absolute top-0 right-0 p-2 opacity-0 group-hover:opacity-100 transition-opacity">
                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-blue-500/40">
                         <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

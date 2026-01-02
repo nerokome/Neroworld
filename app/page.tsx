@@ -101,7 +101,7 @@ export default function Home() {
             className="mt-8"
           >
             <a
-             href="https://drive.google.com/file/d/1CIFVhet9BXzypocQ4JsYJuw_AWC-MhED/view?usp=drive_link"
+             href="https://drive.google.com/file/d/1NHFKHCwgJ2v9g9Cds7_e0w4bHyumpAym/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative flex items-center gap-4 px-6 py-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md hover:bg-blue-500/20 transition-all duration-300 cursor-pointer"

@@ -15,7 +15,7 @@ const projects = [
   },
   {
     name: "watch E-commerce",
-    description: "A community platform for exchanging skills, featuring chat, profiles, and analytics dashboards.",
+    description: "A mobile e-commerce application featuring a responsive user interface and structured state management to support product browsing, cart functionality, and real-time updates within a scalable architecture.",
     technologies: ["Dart", "Provider", ],
     image: "/cartier.png",
     github: "https://github.com/nerokome/nerogit.git",

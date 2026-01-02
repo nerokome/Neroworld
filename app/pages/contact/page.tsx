@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SiGithub, SiLinkedin, SiWhatsapp, SiX } from "react-icons/si";
+import { Toaster, toast } from "react-hot-toast";
 import { FiSend, FiUser, FiMail, FiMessageSquare, FiClock } from "react-icons/fi";
 
 const Page = () => {
@@ -13,10 +14,13 @@ const Page = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+ const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
 
+  const toastId = toast.loading("Sending message...");
+
+  try {
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: {
@@ -24,26 +28,37 @@ const Page = () => {
         Accept: "application/json",
       },
       body: JSON.stringify({
-        access_key: "YOUR_ACCESS_KEY_HERE", // Get one at web3forms.com
+        access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
         name: formData.name,
         email: formData.email,
         message: formData.message,
         subject: `New Portfolio Message from ${formData.name}`,
-        to: "nerooghenekome@gmail.com",
+        autoresponse: `
+Hi ${formData.name},
+
+Thanks for reaching out. I've received your message and will get back to you shortly.
+
+— Nero
+`,
       }),
     });
 
     const result = await response.json();
 
-    if (result.success) {
-      alert("Message Received! I'll get back to you soon.");
-      setFormData({ name: "", email: "", message: "" });
-    } else {
-      alert("Something went wrong. Please try again.");
+    if (!result.success) {
+      throw new Error("Submission failed");
     }
-    
+
+    toast.success("Message sent. Check your email ✉️", { id: toastId });
+    setFormData({ name: "", email: "", message: "" });
+  } catch (error) {
+    console.error(error);
+    toast.error("Something went wrong. Try again.", { id: toastId });
+  } finally {
     setIsSubmitting(false);
-  };
+  }
+};
+
 
   return (
     <main className="relative min-h-screen bg-[#030303] text-white overflow-x-hidden">
@@ -86,8 +101,8 @@ const Page = () => {
               <div className="grid grid-cols-1 gap-4">
                 {[
                   { label: "Github", val: "Nerokome", icon: <SiGithub />, link: "https://github.com/Nerokome", color: "hover:border-white/40" },
-                  { label: "LinkedIn", val: "Nero oghenekome", icon: <SiLinkedin />, link: "#", color: "hover:border-blue-500/40" },
-                  { label: "X / Twitter", val: "@yourhandle", icon: <SiX />, link: "#", color: "hover:border-white/60" },
+                  { label: "LinkedIn", val: "Nero oghenekome", icon: <SiLinkedin />, link: "https://www.linkedin.com/in/oghenero-oghenekome-997360259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app", color: "hover:border-blue-500/40" },
+                  { label: "X ", val: "@Nerokome", icon: <SiX />, link: "https://x.com/nerokome?s=21&t=9eD6yL3-XMpKGdHtbYi4TA", color: "hover:border-white/60" },
                   { label: "WhatsApp", val: "+234 09067136520", icon: <SiWhatsapp />, link: "https://wa.me/2349067136520", color: "hover:border-green-500/40" },
                 ].map((item, i) => (
                   <motion.a
@@ -194,7 +209,7 @@ const Page = () => {
                           initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
                           className="flex items-center justify-center gap-3 font-black uppercase tracking-[0.2em] text-[10px]"
                         >
-                          Initiate Connection <FiSend className="group-hover:translate-x-1 transition-transform" />
+                          Send message  <FiSend className="group-hover:translate-x-1 transition-transform" />
                         </motion.div>
                       )}
                     </AnimatePresence>

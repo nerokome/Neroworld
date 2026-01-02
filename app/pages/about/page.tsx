@@ -56,7 +56,7 @@ const Page = () => {
   </p>
 
   <p>
-    On the <span className="text-blue-400 font-semibold  underline decoration-blue-500/30 underline-offset-4">frontend</span>, I mainly work with React and Next.js to craft clean, dark-friendly interfaces. I care about predictable state, reusable components, and layouts that scale as the app grows.
+    On the <span className="text-blue-400 font-semibold  underline decoration-blue-500/30 underline-offset-4">frontend</span>, I mainly work with React and Next.js to craft clean, friendly interfaces. I care about predictable state, reusable components, and layouts that scale as the app grows.
   </p>
 
   <p>

@@ -6,7 +6,8 @@ import {
   SiNextdotjs, SiReact, SiTypescript, SiJavascript, 
   SiRedux, SiNodedotjs, SiExpress, SiTailwindcss, 
   SiFramer, SiMysql, SiMongodb, SiGithub, SiFigma,
-  SiPostgresql, SiFlutter, SiGo, SiSupabase, SiFirebase 
+  SiPostgresql, SiFlutter, SiGo, SiSupabase, SiFirebase,
+  SiDocker, SiGin
 } from "react-icons/si";
 
 const Page = () => {
@@ -24,25 +25,27 @@ const Page = () => {
       ],
     },
     {
-  title: "Backend & Cloud",
-  description: "I design and build reliable backend systems and cloud architectures that power web and mobile applications. Security, performance, and scalability are always my top priorities.",
-  skills: [
-    { name: "Supabase", icon: <SiSupabase />, color: "group-hover:text-emerald-500" },
-    { name: "Firebase", icon: <SiFirebase />, color: "group-hover:text-orange-500" },
-    { name: "Golang", icon: <SiGo />, color: "group-hover:text-cyan-500" },
-    { name: "Node.js", icon: <SiNodedotjs />, color: "group-hover:text-green-500" },
-    { name: "PostgreSQL", icon: <SiPostgresql />, color: "group-hover:text-blue-400" },
-    { name: "MySQL", icon: <SiMysql />, color: "group-hover:text-blue-600" }, 
-    { name: "MongoDB", icon: <SiMongodb />, color: "group-hover:text-green-600" },
-  ],
-},
+      title: "Backend & Cloud",
+      description: "I design and build reliable backend systems and cloud architectures. Using Go with Gin or Node.js, I create high-performance APIs and scalable database structures.",
+      skills: [
+        { name: "Golang", icon: <SiGo />, color: "group-hover:text-cyan-500" },
+        { name: "Gin", icon: <SiGin />, color: "group-hover:text-cyan-400" },
+        { name: "Node.js", icon: <SiNodedotjs />, color: "group-hover:text-green-500" },
+        { name: "Docker", icon: <SiDocker />, color: "group-hover:text-blue-500" },
+        { name: "Supabase", icon: <SiSupabase />, color: "group-hover:text-emerald-500" },
+        { name: "Firebase", icon: <SiFirebase />, color: "group-hover:text-orange-500" },
+        { name: "PostgreSQL", icon: <SiPostgresql />, color: "group-hover:text-blue-400" },
+        { name: "MySQL", icon: <SiMysql />, color: "group-hover:text-blue-600" },
+        { name: "MongoDB", icon: <SiMongodb />, color: "group-hover:text-green-600" },
+      ],
+    },
     {
       title: "Mobile & Tools",
-      description: "I build mobile apps and leverage modern tools to ensure development is smooth, collaborative, and produces high-quality, maintainable code.",
+      description: "I build cross-platform mobile apps and leverage modern development tools to ensure workflow is smooth, collaborative, and produces high-quality code.",
       skills: [
         { name: "Flutter", icon: <SiFlutter />, color: "group-hover:text-blue-400" },
-        { name: "Redux Toolkit", icon: <SiRedux />, color: "group-hover:text-purple-500" },
         { name: "GitHub", icon: <SiGithub />, color: "group-hover:text-white" },
+        { name: "Redux Toolkit", icon: <SiRedux />, color: "group-hover:text-purple-500" },
         { name: "Figma", icon: <SiFigma />, color: "group-hover:text-orange-400" },
       ],
     },
@@ -50,7 +53,7 @@ const Page = () => {
 
   return (
     <main className="relative min-h-screen bg-[#030303] text-white overflow-x-hidden">
-    
+      {/* Background UI */}
       <div className="fixed inset-0 z-0 overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]" />
         <div className="absolute top-1/3 left-1/4 w-[600px] h-[600px] bg-blue-600/10 blur-[140px] rounded-full animate-pulse-slow" />
@@ -59,10 +62,8 @@ const Page = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle,transparent_0%,#030303_90%)]" />
       </div>
 
-     
       <section className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 md:px-24 py-32">
         <div className="max-w-5xl w-full space-y-16">
-        
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -73,11 +74,10 @@ const Page = () => {
               Tech <span className="text-blue-500">Stack</span>
             </h1>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              Modern tools and BaaS platforms I use to ship scalable products rapidly.
+              A comprehensive list of frameworks, languages, and tools I use to build production-grade systems.
             </p>
           </motion.div>
 
-          {/* Categorized Skills Grid */}
           <div className="space-y-12">
             {skillCategories.map((category, catIndex) => (
               <motion.div 
@@ -88,18 +88,15 @@ const Page = () => {
                 transition={{ delay: catIndex * 0.1 }}
                 className="space-y-6"
               >
-                {/* Category Title & Divider */}
                 <div className="flex items-center gap-4">
                   <h3 className="text-xl font-bold text-gray-200">{category.title}</h3>
                   <div className="h-[1px] flex-grow bg-white/10" />
                 </div>
 
-                {/* Category Description */}
                 <p className="text-gray-400 text-sm md:text-base max-w-3xl">
                   {category.description}
                 </p>
 
-                {/* Skills Grid */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
                   {category.skills.map((skill, index) => (
                     <motion.div

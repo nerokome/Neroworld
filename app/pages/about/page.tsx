@@ -56,15 +56,15 @@ const Page = () => {
   </p>
 
   <p>
-    On the <span className="text-blue-400 font-semibold  underline decoration-blue-500/30 underline-offset-4">frontend</span>, I mainly work with React and Next.js to craft clean, friendly interfaces. I care about predictable state, reusable components, and layouts that scale as the app grows.
+    On the frontend, I mainly work with React and Next.js to craft clean, friendly interfaces. I care about predictable state, reusable components, and layouts that scale as the app grows.
   </p>
 
   <p>
-    Mobile isn’t an afterthought  it’s part of the product experience. I build apps that feel fast, work smoothly, and prioritize <span className="text-white">usability</span> and <span className="text-white">performance</span> across every device.
+    Mobile isn’t an afterthought  it’s part of the product experience. I build apps that feel fast, work smoothly, and prioritize usability and performance across every device.
   </p>
 
   <p>
-    On the <span className="text-blue-400 font-semibold underline decoration-purple-500/30 underline-offset-4">backend</span>, I design APIs and services that actually work for real users: handling authentication, data modeling, integrations, and analytics. I treat backend architecture with the same care as the frontend experience.
+    On the backend, I design APIs and services that actually work for real users: handling authentication, data modeling, integrations, and analytics. I treat backend architecture with the same care as the frontend experience.
   </p>
 </motion.div>
 

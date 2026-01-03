@@ -8,7 +8,7 @@ const projects = [
   {
     name: "Artfolio",
     description: "A platform for artists to showcase their work, track analytics, and manage galleries across web and mobile.",
-    technologies: ["Next.js", "React", "TypeScript", "MongoDB", "Tailwind CSS"],
+    technologies: ["Next.js", "Golang", "TypeScript", "MongoDB", "Tailwind CSS"],
     image: "/artfolio.png", 
     github: "https://github.com/nerokome/artwork.git",
     live: "https://artwork-phi-swart.vercel.app/",

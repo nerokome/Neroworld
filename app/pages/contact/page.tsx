@@ -63,7 +63,7 @@ Thanks for reaching out. I've received your message and will get back to you sho
   return (
     <main className="relative min-h-screen bg-[#030303] text-white overflow-x-hidden">
       
-      {/* Background UI */}
+      
       <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]" />
         <div className="absolute top-1/3 left-1/4 w-[600px] h-[600px] bg-blue-600/10 blur-[140px] rounded-full animate-pulse-slow" />
@@ -77,7 +77,7 @@ Thanks for reaching out. I've received your message and will get back to you sho
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
             
-            {/* Left Content */}
+           
             <motion.div 
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}

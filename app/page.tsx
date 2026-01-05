@@ -93,7 +93,7 @@ export default function Home() {
             Specializing in modern stacks that turn ideas into reality.
           </motion.p>
 
-          {/* CV / Resume Card */}
+        
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

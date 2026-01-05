@@ -145,7 +145,7 @@ const Page = () => {
             className="pt-12 text-center"
           >
             <p className="text-gray-500 font-mono text-sm uppercase tracking-widest">
-              More projects on <a href="#" className="text-white hover:text-blue-400 underline decoration-blue-500/50 underline-offset-8 transition-colors">GitHub</a>
+              More projects on <a href="https://github.com/Nerokome" className="text-white hover:text-blue-400 underline decoration-blue-500/50 underline-offset-8 transition-colors">GitHub</a>
             </p>
           </motion.div>
 

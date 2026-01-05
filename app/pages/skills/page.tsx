@@ -7,7 +7,7 @@ import {
   SiRedux, SiNodedotjs, SiExpress, SiTailwindcss, 
   SiFramer, SiMysql, SiMongodb, SiGithub, SiFigma,
   SiPostgresql, SiFlutter, SiGo, SiSupabase, SiFirebase,
-  SiDocker, SiGin
+  SiDocker, SiGin, SiPostman
 } from "react-icons/si";
 
 const Page = () => {
@@ -44,6 +44,7 @@ const Page = () => {
       description: "I build cross-platform mobile apps and leverage modern development tools to ensure workflow is smooth, collaborative, and produces high-quality code.",
       skills: [
         { name: "Flutter", icon: <SiFlutter />, color: "group-hover:text-blue-400" },
+        { name: "Postman", icon: <SiPostman />, color: "group-hover:text-[#FF6C37]" },
         { name: "GitHub", icon: <SiGithub />, color: "group-hover:text-white" },
         { name: "Redux Toolkit", icon: <SiRedux />, color: "group-hover:text-purple-500" },
         { name: "Figma", icon: <SiFigma />, color: "group-hover:text-orange-400" },

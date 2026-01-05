@@ -26,11 +26,12 @@ const Page = () => {
     },
     {
       title: "Backend & Cloud",
-      description: "I design and build reliable backend systems and cloud architectures. Using Go with Gin or Node.js, I create high-performance APIs and scalable database structures.",
+      description: "I design and build reliable backend systems and cloud architectures. Using Go with Gin or Node.js with Express, I create high-performance APIs and scalable database structures.",
       skills: [
         { name: "Golang", icon: <SiGo />, color: "group-hover:text-cyan-500" },
         { name: "Gin", icon: <SiGin />, color: "group-hover:text-cyan-400" },
         { name: "Node.js", icon: <SiNodedotjs />, color: "group-hover:text-green-500" },
+        { name: "Express.js", icon: <SiExpress />, color: "group-hover:text-white" },
         { name: "Docker", icon: <SiDocker />, color: "group-hover:text-blue-500" },
         { name: "Supabase", icon: <SiSupabase />, color: "group-hover:text-emerald-500" },
         { name: "Firebase", icon: <SiFirebase />, color: "group-hover:text-orange-500" },

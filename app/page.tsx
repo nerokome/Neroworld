@@ -157,7 +157,7 @@ export default function Home() {
           >
             <span className="text-blue-400 font-bold">View My CV</span>
             <span className="w-8 h-8 flex items-center justify-center rounded-full border border-white/10">
-              →
+              
             </span>
           </a>
 

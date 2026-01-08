@@ -3,16 +3,15 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { GitHubCalendar } from "react-github-calendar";
+import { FaArrowRight } from "react-icons/fa";
 
 const words = ["Full-Stack Developer", "Software Engineer", "Mobile Engineer"];
-
-// --- GITHUB SECTION COMPONENT ---
 const GitHubActivity = () => {
   const username = "nerokome";
 
   return (
     <div className="w-full max-w-4xl mt-16 md:mt-24 pb-20">
-      {/* Header */}
+      
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -24,7 +23,7 @@ const GitHubActivity = () => {
         </h2>
       </motion.div>
 
-      {/* Calendar */}
+      
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -53,13 +52,12 @@ const GitHubActivity = () => {
           </div>
         </div>
 
-        {/* Mobile Hint */}
         <div className="md:hidden flex justify-center mt-3 text-[10px] text-gray-600 uppercase tracking-widest">
           <span className="animate-pulse">← Swipe to see activity →</span>
         </div>
       </motion.div>
 
-      {/* Footer */}
+      
       <div className="mt-6 flex items-center gap-2 text-xs md:text-sm text-gray-500">
         <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
         <p>
@@ -103,11 +101,13 @@ export default function Home() {
 
   return (
     <main className="relative min-h-screen bg-[#030303] text-white overflow-x-hidden">
-      {/* Background */}
-      <div className="fixed inset-0 z-0 pointer-events-none">
+      
+      {/* Background UI - Updated to match Projects page exactly */}
+      <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]" />
         <div className="absolute top-1/3 left-1/4 w-[600px] h-[600px] bg-blue-600/10 blur-[140px] rounded-full animate-pulse-slow" />
         <div className="absolute top-2/3 right-1/4 w-[700px] h-[700px] bg-purple-600/10 blur-[180px] rounded-full animate-pulse-slow" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-cyan-500/10 blur-[160px] rounded-full animate-pulse-slow" />
         <div className="absolute inset-0 bg-[radial-gradient(circle,transparent_0%,#030303_90%)]" />
       </div>
 
@@ -157,7 +157,8 @@ export default function Home() {
           >
             <span className="text-blue-400 font-bold">View My CV</span>
             <span className="w-8 h-8 flex items-center justify-center rounded-full border border-white/10">
-              
+             <FaArrowRight />
+
             </span>
           </a>
 

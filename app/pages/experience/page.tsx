@@ -20,7 +20,7 @@ const Page = () => {
     {
       role: "Full-Stack Developer",
       company: "Educify Inc",
-      period: "August 2025 - Dec 2025",
+      period: "August 2024 - Dec 2025",
       description: [
         "Delivered multiple web and mobile applications end-to-end, managing both frontend and backend development for clients.",
         "Implemented Redux Toolkit and other state management patterns for predictable and scalable application architecture.",

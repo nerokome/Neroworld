@@ -69,7 +69,6 @@ const GitHubActivity = () => {
   );
 };
 
-// --- MAIN HOME PAGE ---
 export default function Home() {
   const [text, setText] = useState("");
   const [wordIndex, setWordIndex] = useState(0);
@@ -150,7 +149,7 @@ export default function Home() {
           </p>
 
           <a
-            href="https://drive.google.com/file/d/1NHFKHCwgJ2v9g9Cds7_e0w4bHyumpAym/view"
+            href="https://drive.google.com/file/d/1mksLkjML6RMdz-v0bP-7aDZwateUXDjm/view"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-4 px-6 py-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-blue-500/20 transition"

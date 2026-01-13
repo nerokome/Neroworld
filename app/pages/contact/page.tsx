@@ -129,7 +129,7 @@ Thanks for reaching out. I've received your message and will get back to you sho
               </div>
             </motion.div>
 
-            {/* Right Content: Form */}
+          
             <motion.div 
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}

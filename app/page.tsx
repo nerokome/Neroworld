@@ -101,7 +101,7 @@ export default function Home() {
   return (
     <main className="relative min-h-screen bg-[#030303] text-white overflow-x-hidden">
       
-      {/* Background UI - Updated to match Projects page exactly */}
+      
       <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]" />
         <div className="absolute top-1/3 left-1/4 w-[600px] h-[600px] bg-blue-600/10 blur-[140px] rounded-full animate-pulse-slow" />
@@ -110,10 +110,9 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(circle,transparent_0%,#030303_90%)]" />
       </div>
 
-      {/* Content */}
       <section className="relative z-10 flex flex-col items-center px-6 md:px-24 pt-24 md:pt-48">
         <div className="max-w-4xl w-full mx-auto">
-          {/* Badge */}
+       
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}

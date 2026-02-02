@@ -15,7 +15,7 @@ const Page = () => {
 
   return (
     <main className="relative min-h-screen bg-[#030303] text-white overflow-x-hidden">
-      {/* FIXED Background Layer (Unchanged) */}
+     
       <div className="fixed inset-0 z-0 overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]" />
         <div className="absolute top-1/3 left-1/4 w-[600px] h-[600px] bg-blue-600/10 blur-[140px] rounded-full" />

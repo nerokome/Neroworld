@@ -6,6 +6,30 @@ import { motion } from "framer-motion";
 const Page = () => {
   const experiences = [
     {
+      role: "Full-Stack Developer",
+      company: "Outcess Solutions",
+      period: "January 2026 - Present",
+      description: [
+        "Contribute to ongoing product development by delivering features across the frontend and backend.",
+        "Build responsive interfaces and connect user workflows to application APIs and data services.",
+        "Implement backend endpoints and data integrations that support product functionality.",
+        "Investigate issues and improve application stability, performance, and maintainability.",
+        "Work with the team to refine requirements and ship iterative updates to the application.",
+      ],
+    },
+    {
+      role: "Full-Stack Developer",
+      company: "Scah (Contract)",
+      period: "June 2025 - May 2026",
+      description: [
+        "Delivered full-stack functionality for a fixed-term engagement, working from requirements through implementation.",
+        "Developed interface flows and wired them to the services and data needed to complete each user task.",
+        "Built and connected application APIs, database operations, and external service integrations.",
+        "Validated completed features, fixed defects, and refined behavior based on project feedback.",
+        "Coordinated implementation priorities with the team to complete the agreed project work during the contract.",
+      ],
+    },
+    {
       role: "Frontend Developer",
       company: "Scholarguide Tech",
       period: "March 2025 - Present",

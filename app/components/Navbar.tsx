@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -19,7 +20,6 @@ const Navbar = () => {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
 
-  
   useEffect(() => {
     if (open) {
       document.body.style.overflow = 'hidden'
@@ -37,7 +37,10 @@ const Navbar = () => {
             href="/"
             className="text-lg font-black tracking-tighter text-white uppercase italic"
           >
-            Nero Oghenekome<span className="text-blue-500">.</span>
+            <span className="flex items-center gap-3">
+              <Image src="/icon.svg" alt="" width={36} height={36} priority />
+              <span>Nero Oghenekome<span className="text-blue-500">.</span></span>
+            </span>
           </Link>
 
           {/* Desktop Links */}
@@ -60,13 +63,16 @@ const Navbar = () => {
             })}
           </div>
 
-          {/* Mobile Toggle - Placed on the right, but drawer opens from left */}
-          <button
-            onClick={() => setOpen(true)}
-            className="md:hidden w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-gray-300"
-          >
-            <Menu size={20} />
-          </button>
+          <div className="flex items-center gap-3">
+            <button
+              type="button"
+              onClick={() => setOpen(true)}
+              aria-label="Open navigation menu"
+              className="md:hidden w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-gray-300"
+            >
+              <Menu size={20} />
+            </button>
+          </div>
         </div>
       </nav>
 
